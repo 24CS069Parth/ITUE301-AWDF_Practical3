@@ -1,22 +1,22 @@
 import React from 'react';
 
-function Header({ title, name, themeColor = '#1e3a8a' }) {
+function Header({ title, name, themeColor = '#4f46e5' }) {
   // Theme color prop applied as an inline style as per supplementary requirements
   const headerStyle = {
     backgroundColor: themeColor,
     color: '#ffffff',
-    padding: '2rem 1.5rem',
+    padding: '2.25rem 1.5rem',
     textAlign: 'center',
-    borderRadius: '8px',
+    borderRadius: '12px',
     marginBottom: '1.5rem',
-    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 8px 24px -4px rgba(79, 70, 229, 0.25)',
   };
 
   return (
     <header style={headerStyle} className="header-container">
       <h1 className="header-title">{title}</h1>
       <p className="header-subtitle">Welcome to the portfolio of <strong>{name}</strong></p>
-      <span className="header-badge">Full Stack Development (ITUE301) - Practical 1</span>
+      <span className="header-badge">Full Stack Development (ITUE301) - Practical 3</span>
     </header>
   );
 }

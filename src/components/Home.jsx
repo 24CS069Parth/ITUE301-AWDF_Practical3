@@ -6,30 +6,36 @@ import Skills from './Skills';
 function Home({ studentInfo, skills }) {
   // useState variable for toggling UI visibility on Home page
   const [showOverview, setShowOverview] = useState(false);
-  const [headerColor, setHeaderColor] = useState('#1d4ed8');
+  const [headerColor, setHeaderColor] = useState('#4f46e5');
 
   return (
     <div className="home-page">
       {/* Dynamic Header Theme Switcher */}
       <div className="theme-bar">
-        <span className="theme-label">Header Theme:</span>
+        <span className="theme-label">Accent Theme:</span>
         <button
           type="button"
-          className={`color-dot blue ${headerColor === '#1d4ed8' ? 'selected' : ''}`}
-          onClick={() => setHeaderColor('#1d4ed8')}
-          title="Royal Blue"
+          className={`color-dot indigo ${headerColor === '#4f46e5' ? 'selected' : ''}`}
+          onClick={() => setHeaderColor('#4f46e5')}
+          title="Vibrant Indigo"
         />
         <button
           type="button"
-          className={`color-dot teal ${headerColor === '#0f766e' ? 'selected' : ''}`}
-          onClick={() => setHeaderColor('#0f766e')}
-          title="Teal"
+          className={`color-dot emerald ${headerColor === '#059669' ? 'selected' : ''}`}
+          onClick={() => setHeaderColor('#059669')}
+          title="Fresh Emerald"
         />
         <button
           type="button"
-          className={`color-dot slate ${headerColor === '#334155' ? 'selected' : ''}`}
-          onClick={() => setHeaderColor('#334155')}
-          title="Slate"
+          className={`color-dot rose ${headerColor === '#e11d48' ? 'selected' : ''}`}
+          onClick={() => setHeaderColor('#e11d48')}
+          title="Crimson Rose"
+        />
+        <button
+          type="button"
+          className={`color-dot slate ${headerColor === '#1e293b' ? 'selected' : ''}`}
+          onClick={() => setHeaderColor('#1e293b')}
+          title="Dark Slate"
         />
       </div>
 
@@ -54,9 +60,9 @@ function Home({ studentInfo, skills }) {
           <div className="overview-box">
             <h4>ITUE301 - Advanced Web Development Frameworks Roadmap</h4>
             <p>
-              Current Stage: <strong>Practical 2 (State Management & Multi-Page Routing)</strong>.
-              Transitioning from static component composition to full client-side SPA routing with React Router v6
-              and reactive UI state driven by <code>useState</code>.
+              Current Stage: <strong>Practical 3 (API Integration & Data Rendering in React)</strong>.
+              Consuming public REST APIs using the <code>fetch</code> API, executing asynchronous requests
+              on component mount with <code>useEffect</code>, and managing Loading, Success, and Error states.
             </p>
           </div>
         )}

@@ -14,20 +14,22 @@ function App() {
 
   // Student and academic portfolio data
   const studentInfo = {
-    name: 'Aayush Malhotra',
-    id: '24CS051',
+    name: 'Vivek Maheshwari',
+    id: '24CS050',
     department: 'Department of Computer Science and Engineering',
     institution: 'Chandubhai S Patel Institute of Technology (CSPIT), CHARUSAT',
     academicYear: '2025-26',
-    email: '24cs051@charusat.edu.in',
-    githubUrl: 'https://github.com/24CS051Aayush',
-    bio: 'Third-year B.Tech Computer Science and Engineering student at CSPIT, Charusat. Passionate about modern web architecture, component-driven design, and building scalable full-stack web applications. Currently mastering React, Vite, Node.js, and advanced development frameworks through hands-on coursework.',
+    email: '24cs050@charusat.edu.in',
+    githubUrl: 'https://github.com/24CS050Vivek',
+    bio: 'Third-year B.Tech Computer Science and Engineering student at CSPIT, CHARUSAT. Passionate about modern web architecture, component-driven design, and building scalable full-stack web applications. Currently mastering React, Vite, Node.js, and advanced development frameworks through hands-on coursework.',
   };
 
   // Skills array passed to Home -> Skills component via props
   const skills = [
     'React.js (React Router v6)',
     'State Management (useState)',
+    'Lifecycle & Effects (useEffect)',
+    'REST API Integration (fetch)',
     'JavaScript (ES6+)',
     'JSX & Component Architecture',
     'Controlled Forms & Real-time Binding',
@@ -49,10 +51,16 @@ function App() {
       title: 'Practical 2: SPA Routing & State Management',
       description: 'Multi-page single-page application with client-side routing (React Router v6), controlled form inputs, dynamic state toggling, and live previews.',
       tech: ['React Router v6', 'useState', 'SPA Navigation', 'Controlled Forms'],
-      status: 'Current (Prac 2)',
+      status: 'Completed (Prac 2)',
     },
     {
-      title: 'Practical 3-13: Full-Stack Developer Platform',
+      title: 'Practical 3: GitHub REST API Integration & Data Rendering',
+      description: 'Dynamic data fetching using fetch & useEffect, handling loading, error, and success states with search filtering and error recovery.',
+      tech: ['React', 'useEffect', 'REST API', 'GitHub API', 'Async/Await'],
+      status: 'Current (Prac 3)',
+    },
+    {
+      title: 'Practical 4-13: Full-Stack Developer Platform',
       description: 'Progressive end-product expanding into component lifecycles, hooks, context API, backend Express/MongoDB integration, and deployment.',
       tech: ['MERN Stack', 'Express.js', 'MongoDB', 'REST APIs'],
       status: 'Upcoming Modules',

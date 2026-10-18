@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Spinner from './Spinner';
 import ErrorMessage from './ErrorMessage';
 
@@ -12,9 +12,9 @@ function Projects({ projectList }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [simulateError, setSimulateError] = useState(false);
 
-  const username = '24CS051Aayush';
+  const username = '24CS050Vivek';
 
-  const fetchRepositories = () => {
+  const fetchRepositories = useCallback(() => {
     setLoading(true);
     setError(null);
 
@@ -43,12 +43,12 @@ function Projects({ projectList }) {
       .finally(() => {
         setLoading(false);
       });
-  };
+  }, [simulateError, username]);
 
   // Step 2: Use useEffect to fetch data on component mount
   useEffect(() => {
     fetchRepositories();
-  }, [simulateError]);
+  }, [fetchRepositories]);
 
   // Filter repositories based on search input
   const filteredRepos = repos.filter((repo) =>
